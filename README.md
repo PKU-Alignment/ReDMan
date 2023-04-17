@@ -70,6 +70,8 @@ So far, we release the following tasks (with many more to come):
 <img src="assets/image_folder/redman_task.png" align="middle"  border="0"/>
 
 
+
+
 ### Constraint Task List
 - ShadowHandCatchOver2Underarm_Safe_finger
 - ShadowHandCatchOver2Underarm_Safe_joint
@@ -91,10 +93,15 @@ python train.py --task=ShadowHandOver --algo=ppol --cost_lim 25.0
 ```
 For more information about running commands, please refer to [experiment.md](experiment.md) in the root directory
 
-### Available Hands and Arms
-To promote research and community development in the field, having multiple types of dexterous hands, such as the Shadow Hand, Allegro Hand, and Tri-Finger, is crucial. ReDMan goes beyond offering just the Shadow Hand, by providing a selection of five other dexterous multi-finger hands.
+### Visual Input
+ We provide multiple modalities of visual information as input, including **RGB, RGB-D, and point cloud**. It is generated using the camera in the Isaac Gym, and the pose and toward of the camera can be customized by the user to obtain the desired visual observation. 
 
-Incorporating a robotic arm drive at the base of the dexterous hand not only mimics real-world conditions but also represents an essential step in achieving successful sim-to-real transfer. Due to the inherent difficulty in reproducing the true dynamics of a flying hand, the ReDMan platform simplifies the deployment process from simulation to real-world applications by permitting adjustments to the dynamics and physics parameters of the arm to minimize the reality gap.
+<img src="assets/README_images/visual_input.png" align="middle"  border="0"/>
+
+### Available Hands and Arms
+To promote research and community development in the field, having multiple types of dexterous hands, such as the Shadow Hand, Allegro Hand, and Tri-Finger, is crucial. ReDMan goes beyond offering just the Shadow Hand, by providing a selection of **five other dexterous multi-finger hands**.
+
+Incorporating a robotic arm drive at the base of the dexterous hand not only mimics real-world conditions but also represents an essential step in achieving successful sim-to-real transfer. Due to the inherent difficulty in reproducing the true dynamics of a flying hand, the ReDMan platform simplifies the deployment process from simulation to real-world applications by permitting adjustments to **the dynamics and physics parameters of the arm** to minimize the reality gap.
 
 <img src="assets/image_folder/hands_arms.png" align="middle"  border="0"/>
 
