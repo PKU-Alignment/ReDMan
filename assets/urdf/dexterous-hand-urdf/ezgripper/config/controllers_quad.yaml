@@ -1,0 +1,7 @@
+arm_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - left_ezgripper_knuckle_1
+    - left_ezgripper_knuckle_2
+    - left_ezgripper_knuckle_3
+    - left_ezgripper_knuckle_4

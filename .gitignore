@@ -1,0 +1,8 @@
+wandb/
+log/
+data/
+__pycache__/
+*__pycache__*
+README_old.md
+data/
+ReDMan.egg-info/

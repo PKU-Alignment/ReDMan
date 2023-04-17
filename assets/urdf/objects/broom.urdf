@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<robot name="broom">
+  <link name="broom">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 -1.1"/>
+      <geometry>
+          <mesh filename="meshes/broom stl.STL" scale=".1 .1 .1"/>
+      </geometry>
+      <material name="Grey">
+        <color rgba="0.65 0.65 0.65 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.02" length="2.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <density value="50.0"/>
+    </inertial>
+  </link>
+  <link name="broom_bottom">
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.0"/>
+      <geometry>
+        <box size="0.5 0.1 0.6"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <density value="50.0"/>
+    </inertial>
+  </link>
+  <joint name="broom_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 -0.8"/>
+    <parent link="broom"/>
+    <child link="broom_bottom"/>
+  </joint>
+
+</robot>

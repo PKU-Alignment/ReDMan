@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="ezgripper_stand_alone" xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+<xacro:property name="ezgripper_offset_x" value="0.0"/>
+<xacro:property name="ezgripper_offset_y" value="0.0"/>
+<xacro:property name="ezgripper_offset_z" value="0.0"/>
+
+
+<xacro:include filename="$(find ezgripper_driver)/urdf/ezgripper_dual_gen2_articulated.urdf.xacro"/>
+<!-- Add the gripper -->
+<ezgripper_dual prefix="left" parent_link="base_link">
+<origin xyz="${ezgripper_offset_x} ${ezgripper_offset_y} ${ezgripper_offset_z}" rpy="0 0 0"/>
+</ezgripper_dual>
+
+<link name="world"/>
+<joint name="fixed" type="fixed">
+  <parent link="world"/>
+  <child link="base_link"/>
+</joint>
+<link name="base_link">
+   <visual>
+       <geometry>
+           <cylinder length="0.42" radius="0.02"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="0 0 0.0"/>
+        <material name="red"/>
+    </visual>
+</link>
+
+</robot>

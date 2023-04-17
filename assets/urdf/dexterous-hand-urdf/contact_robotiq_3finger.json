@@ -1,0 +1,13 @@
+{
+    "gripper_fingerA_prox": [28, 29, 30, 31], 
+    "gripper_fingerA_med": [25, 26, 27, 24], 
+    "gripper_fingerA_dist": [190, 200, 180, 181], 
+    
+    "gripper_fingerB_prox": [28, 29, 30, 31], 
+    "gripper_fingerB_med": [25, 26, 27, 24],
+    "gripper_fingerB_dist": [190, 200, 180, 181],  
+    
+    "gripper_fingerC_prox": [28, 29, 30, 31],
+    "gripper_fingerC_med": [25, 26, 27, 24],
+    "gripper_fingerC_dist": [190, 200, 180, 181]
+}

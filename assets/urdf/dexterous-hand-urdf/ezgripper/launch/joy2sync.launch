@@ -1,0 +1,19 @@
+<launch>
+  <node pkg="joy" type="joy_node" name="joy_node">
+    <param name="dev" value="/dev/input/js0" />
+    <param name="autorepeat_rate" value="20" />
+  </node>
+
+  <node pkg="ezgripper_driver" type="ezgripper.py" name="ezgripper" output="screen">
+    <param name="~port" value="/dev/ttyUSB0"/>
+    <param name="~baud" value="57600"/>
+    <!-- Controls several grippers synchronously as one.
+         The ids of the servos are listed in the brackets. -->
+    <rosparam param="grippers">{main:[1,2]}</rosparam>
+  </node>
+  
+  <node pkg="ezgripper_driver" type="client.py" name="ezgripper_client" output="screen">
+    <rosparam param="grippers">['ezgripper/main']</rosparam>
+  </node>
+
+</launch>

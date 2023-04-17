@@ -1,0 +1,16 @@
+<launch>
+  <node pkg="joy" type="joy_node" name="joy_node">
+    <param name="dev" value="/dev/input/js0" />
+    <param name="autorepeat_rate" value="20" />
+  </node>
+
+  <node pkg="ezgripper_driver" type="ezgripper.py" name="ezgripper" output="screen">
+    <param name="~port" value="192.168.0.200:5000"/>
+    <rosparam param="grippers">{main:[1]}</rosparam>
+  </node>
+  
+  <node pkg="ezgripper_driver" type="client.py" name="ezgripper_client" output="screen">
+    <rosparam param="grippers">['ezgripper/main']</rosparam>
+  </node>
+
+</launch>

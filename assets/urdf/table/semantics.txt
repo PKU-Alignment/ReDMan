@@ -1,0 +1,9 @@
+link_0 hinge caster
+link_1 hinge wheel
+link_2 hinge caster
+link_3 hinge wheel
+link_4 hinge caster
+link_5 hinge wheel
+link_6 hinge caster
+link_7 hinge wheel
+link_8 free furniture_body
